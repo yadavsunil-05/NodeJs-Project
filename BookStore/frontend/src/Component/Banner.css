@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+.banner {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.6)), url("https://musemaster.net/prebook-html/assets/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 110vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 80px;
+  object-fit: contain;
+}
+
+.main-header-sec {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 400px;
+  margin-top: 50px;
+}
+
+.jumbotron-txt-container-1 {
+  width: 60%;
+}
+
+.main-header-sec h1 {
+  color: white;
+  font-size: 4rem;
+  font-weight: bolder;
+  text-align: left;
+  margin-left: 150px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.main-header-sec img {
+  max-width: 73%;
+  height: auto;
+  display: block;
+  margin: 5px auto;
+  margin-bottom: 20px;
+  margin-right: 100px;
+}
+
+.main-header-sec .lead {
+  margin: 20px auto;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.795);
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: justify;
+  width: 60%;
+}
+
+
+.banner-btn {
+  padding: 16px 40px;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #202020;
+  font-weight: 500;
+  padding: 14px 27px;
+  letter-spacing: 1px;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  border-radius: 0.3rem;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  transition: all 0.4s ease-in;
+}
+
+.banner-btn:hover {
+  background-color: #EE5A3F;
+  color: #fff;
+}
