@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
 .banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.6)), url("https://musemaster.net/prebook-html/assets/hero-bg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.7)), url("../assets/sign-banner-1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 110vh;

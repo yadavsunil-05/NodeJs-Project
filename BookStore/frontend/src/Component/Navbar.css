@@ -20,9 +20,16 @@
 
 .nav-link-container {
   width: 55%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sign-btn-container {
+  width: 35%;
 }
 
 .nav-link {
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -30,6 +37,11 @@
 
 .nav-link li {
   list-style: none;
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-link li:hover {
+  transform: scale(1.04);
 }
 
 .nav-link-tag {
@@ -39,9 +51,60 @@
   transition: all 0.3s linear;
   letter-spacing: 1px;
   font-size: 1.1rem;
-  color: aliceblue;
+  color: white;
 }
 
 .nav-link-tag:hover {
   color: #EE5A3F;
+}
+
+.nav-btn-link-1,
+.nav-btn-link-2,
+.nav-btn-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.nav-btn-link-1,
+.nav-btn-link-2,
+.nav-btn-link {
+  transition: transform 0.5s ease-in-out;
+}
+
+.nav-btn-link-1:hover,
+.nav-btn-link-2:hover {
+  transform: scale(1.10);
+}
+
+.nav-btn-link-1 {
+  margin-right: 20px;
+}
+
+.nav-btn {
+  background-color: #EE5A3F;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: normal;
+  height: 35px;
+  padding: 6px 15px;
+  color: whitesmoke;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.user-logo {
+  padding: 6px 14px;
+  border-radius: 100px;
+  background-color: #b93922;
+  font-size: 1.2rem;
+}
+
+.user-logo:hover {
+  cursor: pointer;
 }

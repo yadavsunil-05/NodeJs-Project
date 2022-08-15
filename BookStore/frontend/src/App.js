@@ -5,6 +5,7 @@ import Banner from "./Component/Banner";
 import Footer from "./Component/Footer";
 import SignUp from "./Component/SignUp";
 import PrivateComponent from "./Component/PrivateComponent"
+import Login from "./Component/Login";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           </Route>
 
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
       </BrowserRouter>

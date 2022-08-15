@@ -1,6 +1,6 @@
 .signup-banner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3),
-      rgba(0, 0, 0, 0.6)), url("../assets/sign-banner-1.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.7)), url("../assets/sign-banner.jpg");
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,6 +16,7 @@
   width: 400px;
   height: 400px;
   background: rgba(0, 0, 0, 0.6);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
 .form {
@@ -30,6 +31,7 @@
   outline: none;
   border: none;
   border-bottom: 1px solid black;
+  border-left: 5px solid rgb(132, 132, 132);
   width: 100%;
   margin: 0 0 15px;
   padding: 15px;
@@ -45,4 +47,5 @@
   padding: 15px;
   border: none;
   background: coral;
+  margin-top: 15px;
 }
