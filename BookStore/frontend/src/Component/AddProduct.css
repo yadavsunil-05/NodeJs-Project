@@ -1,0 +1,52 @@
+.prod-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  border-radius: 6px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.form-container {
+  width: 50%;
+  border: 2px solid white;
+  border-radius: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.join h3 {
+  margin-bottom: 5px;
+}
+
+.input {
+  width: 80%;
+  padding: 7px 12px;
+  margin: 5px 0px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+
+.sub-btn {
+  width: 86%;
+  padding: 5px 10px;
+  margin-top: 7px;
+  background-color: black;
+  color: white;
+  font-family: "Baloo Bhai 2", cursive;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.sub-btn:hover {
+  background-color: rgb(83, 83, 83);
+  transition: 0.3s;
+}

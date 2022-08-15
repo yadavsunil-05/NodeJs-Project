@@ -6,6 +6,7 @@ import Footer from "./Component/Footer";
 import SignUp from "./Component/SignUp";
 import PrivateComponent from "./Component/PrivateComponent"
 import Login from "./Component/Login";
+import AddProduct from "./Component/AddProduct";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
 
           <Route element={<PrivateComponent />}>
             <Route path="/" element={<Banner />} />
-            <Route path="/add" element={<h1>Add Books to the Page</h1>} />
+            <Route path="/add" element={<AddProduct />} />
             <Route path="/update" element={<h1>Add Books to the Page</h1>} />
             <Route path="/logout" element={<h1>Add Books to the Page</h1>} />
             <Route path="/profile" element={<h1>Add Books to the Page</h1>} />
@@ -25,7 +26,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );

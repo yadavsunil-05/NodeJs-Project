@@ -13,9 +13,8 @@ function SignUp() {
 
   useEffect(() => {
     const auth = localStorage.getItem("user")
-    if (auth) {
+    if (auth)
       navigate("/")
-    }
   }, [])
 
   async function handleSubmit(e) {
@@ -32,9 +31,15 @@ function SignUp() {
       localStorage.setItem("user", JSON.stringify(output));
       navigate("/");
       toast.success("User Registered!!!")
+      setName("")
+      setEmail("")
+      setPassword("")
     }
     else {
       toast.error("Please Enter All the Details.")
+      setName("")
+      setEmail("")
+      setPassword("")
     }
   }
 

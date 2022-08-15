@@ -2,10 +2,15 @@ const express = require("express");
 const cors = require("cors");
 require("./db/config");
 const User = require("./db/User");
+const Product = require("./db/Product")
+
 
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+
+// <----------- User Authentication ------------->
 
 app.post("/register", async (req, resp) => {
   const user = new User(req.body);
@@ -14,7 +19,6 @@ app.post("/register", async (req, resp) => {
   delete result.password
   resp.send(result);
 });
-
 
 app.post("/login", async (req, resp) => {
   if (req.body.email && req.body.password) {
@@ -26,6 +30,20 @@ app.post("/login", async (req, resp) => {
     resp.send({ result: "No User Found!!" });
   }
 });
+
+
+// <----------- Products ------------->
+
+app.post("/add-product", async (req, resp) => {
+  const product = new Product(req.body)
+  let result = await product.save()
+  resp.send(result)
+})
+
+app.get("/products", async (req, resp) => {
+  let products = await Product.find()
+  products.length ? resp.send(products) : resp.send({ result: "No Product Found" })
+})
 
 
 app.listen(5000);
