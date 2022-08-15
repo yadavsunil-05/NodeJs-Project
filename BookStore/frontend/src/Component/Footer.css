@@ -1,0 +1,37 @@
+.footer {
+  background-color: #202020;
+  color: whitesmoke;
+  padding: 40px;
+}
+
+.footer-info {
+  border-bottom: 2px solid #ff0000a8;
+  width: 40%;
+  margin: 3px auto;
+  padding-bottom: 6px;
+}
+
+.footer-info,
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo {
+  margin-right: 10px;
+}
+
+.social {
+  margin-top: 13px;
+}
+
+.footer-logo {
+  height: 40px;
+}
+
+.social-logo {
+  font-size: 45px;
+  margin-left: 20px;
+  color: white;
+}
