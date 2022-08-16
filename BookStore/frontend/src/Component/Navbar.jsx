@@ -2,6 +2,7 @@ import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import logo from "../assets/logo.png"
 
 function Navbar() {
   const auth = localStorage.getItem("user");
@@ -17,7 +18,10 @@ function Navbar() {
   return (
     <div>
       <div className="nav-container">
-        <div className="logo">BookStore</div>
+        <div className="logo">
+          <img src={logo} alt="logo" />
+          <span> BookStore</span>
+        </div>
         <div className="nav-link-container">
           {
             auth ?
