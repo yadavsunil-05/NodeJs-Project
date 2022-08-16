@@ -1,40 +1,44 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./AddProduct.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useParams, useNavigate } from "react-router-dom"
 
-function AddProduct() {
+function UpdateBook() {
   const [name, setBName] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDesc] = useState("");
   const [image, setImage] = useState("");
+  const { id } = useParams()
+  const navigate = useNavigate()
 
-  const handleAdd = async (e) => {
+  useEffect(() => {
+    async function getBookDetail() {
+      const resp = await fetch(`http://localhost:5000/product/${id}`)
+      let data = await resp.json()
+      setBName(data.name)
+      setPrice(data.price)
+      setDesc(data.description)
+      setImage(data.image)
+    }
+    getBookDetail()
+  }, [])
+
+  const handleUpdate = async (e) => {
     e.preventDefault();
     if (name && price && description && image) {
-      let userId = JSON.parse(localStorage.getItem("user"));
-      userId = userId._id;
-      let result = await fetch("http://localhost:5000/add-product", {
-        method: "Post",
-        body: JSON.stringify({
-          name,
-          price,
-          description,
-          image,
-          userId,
-        }),
+      let result = await fetch(`http://localhost:5000/product/${id}`, {
+        method: "Put",
+        body: JSON.stringify({ name, price, description, image }),
         headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      result = await result.json();
-      toast.success("Book Ready to Sell..")
-      setBName("")
-      setPrice("")
-      setDesc("")
-      setImage("")
+          "Content-Type": "application/json"
+        }
+      })
+      result = await result.json()
+      navigate("/")
+      toast.success("Book Details Updated!!")
     } else {
-      toast.error("Please Enter All Fields...")
+      toast.error("Please Enter All the Fields")
     }
   };
 
@@ -42,11 +46,11 @@ function AddProduct() {
     <>
       <div className="prod-container">
         <div className="form-container">
-          <h1>Add Book Today! Start Selling.</h1>
-          <form className="form" onSubmit={handleAdd}>
+          <h1>Update Book Details.</h1>
+          <form className="form" onSubmit={handleUpdate}>
             <input
               type="text"
-              placeholder="Enter Book Name"
+              placeholder="Update Book Name"
               className="input"
               value={name}
               onChange={(e) => setBName(e.target.value)}
@@ -54,7 +58,7 @@ function AddProduct() {
             <br />
             <input
               type="number"
-              placeholder="Enter Price"
+              placeholder="Update Price"
               className="input"
               value={price}
               onChange={(e) => setPrice(e.target.value)}
@@ -62,7 +66,7 @@ function AddProduct() {
             <br />
             <input
               type="text"
-              placeholder="Enter Description"
+              placeholder="Update Description"
               className="input"
               value={description}
               onChange={(e) => setDesc(e.target.value)}
@@ -70,12 +74,12 @@ function AddProduct() {
             <br />
             <input
               text="text"
-              placeholder="Enter Image Url"
+              placeholder="Update Image Url"
               className="input"
               value={image}
               onChange={(e) => setImage(e.target.value)}
             />
-            <button className="sub-btn">ADD BOOK</button>
+            <button className="sub-btn">UPDATE BOOK</button>
           </form>
         </div>
       </div>
@@ -83,4 +87,4 @@ function AddProduct() {
   );
 }
 
-export default AddProduct;
+export default UpdateBook;    

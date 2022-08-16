@@ -13,6 +13,7 @@ function Navbar() {
     navigate("/signup")
   }
 
+
   return (
     <div>
       <div className="nav-container">
@@ -29,16 +30,6 @@ function Navbar() {
                 <li>
                   <Link to="/add" className="nav-link-tag">
                     Add Book
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/update" className="nav-link-tag">
-                    Update Book
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/profile" className="nav-link-tag">
-                    Profile
                   </Link>
                 </li>
                 <li>

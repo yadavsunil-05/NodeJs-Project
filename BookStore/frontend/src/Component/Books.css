@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+.Book-main-cont {
+  padding-top: 50px;
+  background-color: rgb(241, 241, 241);
+  padding-bottom: 100px;
+}
+
+.Book-main-cont h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.left {
+  max-width: 250px;
+  width: 100%;
+}
+
+.right {
+  max-width: 250px;
+  width: 100%;
+}
+
+.book-symbol {
+  background-color: transparent;
+  font-size: 1.2rem;
+  margin: 3px;
+}
+
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+
+.search-btn {
+  font-size: 1.625rem;
+  min-height: 50px;
+  background: #EE5A3F;
+  box-shadow: 0 1px 0 rgb(0 0 0 / 45%);
+  color: #fff;
+  padding: 0 25px;
+  outline: none;
+  border: none;
+  border-radius: 2px
+}
+
+.search-input {
+  border: 0;
+  border: none;
+  border-bottom: 2px solid #ffa00a;
+  height: 50px !important;
+  min-width: 450px;
+  outline: none;
+  padding: 10px 10px 0;
+  border-radius: 2px
+}
+
+.Book-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card-container img {
+  max-height: 200px;
+  object-fit: contain;
+  position: absolute;
+  top: -60px;
+  left: 28px;
+  border: 3px solid white;
+}
+
+.card-container {
+  width: 37%;
+  height: 290px;
+  padding: 20px;
+  margin: 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  position: relative;
+  margin-top: 110px;
+  background-color: white;
+}
+
+.card-info {
+  width: 62%;
+  margin-left: 150px;
+  padding: 10px;
+  padding-left: 20px;
+  height: 58%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.book-name {
+  margin-bottom: 9px;
+  color: rgb(63, 63, 63);
+}
+
+.book-price {
+  color: green;
+  font-size: 1.3rem;
+}
+
+.card-desc {
+  padding: 10px;
+  text-align: justify;
+}
+
+.card-desc p {
+  line-height: 24px;
+  font-size: 16px;
+  color: #606060e7;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.favorite {
+  font-size: 1.3rem;
+  margin-left: 10px;
+  text-align: center;
+  color: #e81d1d;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+}
+
+.btn {
+  font-size: 0.9rem;
+  padding: 6px 10px;
+  margin-top: 8px;
+  border: none;
+  outline: none;
+  background: #EE5A3F;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 3px;
+}
+
+.delete-btn,
+.update-btn {
+  font-size: 1rem;
+  padding: 5px 8px;
+  margin-left: 15px;
+  background-color: #e81d1dc3;
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.update-btn {
+  background-color: lightblue;
+}
+
+.update-link {
+  color: white;
+}
+
+.like-btn {
+  background-color: lightcoral;
+}
