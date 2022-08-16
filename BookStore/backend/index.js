@@ -3,6 +3,7 @@ const cors = require("cors");
 require("./db/config");
 const User = require("./db/User");
 const Product = require("./db/Product");
+const port = process.env.PORT || 5000
 
 const app = express();
 app.use(express.json());
@@ -69,4 +70,6 @@ app.get("/search/:key", async (req, resp) => {
   resp.send(result);
 });
 
-app.listen(5000)
+app.listen(port, () => {
+  console.log(`listening to port ${port}`);
+})
